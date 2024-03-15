@@ -8,6 +8,10 @@ const port = 3000;
 
 app.use(express.json());
 
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
 const validateApiKeyAndSecret = (req, res, next) => {
     const apiKey = req.headers['x-api-key'];
     const apiSecret = req.headers['x-api-secret'];
@@ -63,3 +67,5 @@ app.post('/wallet-identity', validateApiKeyAndSecret, async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+module.exports = app

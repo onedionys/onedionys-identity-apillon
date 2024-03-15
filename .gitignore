@@ -7,3 +7,4 @@ coverage/
 # Files
 .env
 .DS_Store
+.vercel
