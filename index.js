@@ -8,10 +8,6 @@ const port = 3000;
 
 app.use(express.json());
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
-
 const validateApiKeyAndSecret = (req, res, next) => {
     const apiKey = req.headers['x-api-key'];
     const apiSecret = req.headers['x-api-secret'];
