@@ -26,6 +26,8 @@ const validateApiKeyAndSecret = (req, res, next) => {
     next();
 };
 
+app.get("/", (req, res) => res.json({ message: "Welcome to My API" }));
+
 app.post('/generate-message', validateApiKeyAndSecret, (req, res) => {
     const data = `Test message from One Dionys`;
     const message = req.identity.generateSigningMessage(data);
