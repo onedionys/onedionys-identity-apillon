@@ -1,6 +1,6 @@
 {
   "name": "onedionys-identity-apillon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple function to create APIs that are used to identify wallets.",
   "main": "src/index.js",
   "directories": {
